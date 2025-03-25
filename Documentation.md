@@ -7,7 +7,7 @@ local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/jen
 ```lua
 local Window = OrionLib:MakeWindow({Name = "Title of the library", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest"})
 ```
---[[
+
 Name = <string>
 HidePremium = <bool>
 SaveConfig = <bool>
@@ -17,8 +17,6 @@ IntroText = <string>
 IntroIcon = <string>
 Icon = <string>
 CloseCallback = <function>
-]]
-
 
 ## Creating a Tab
 ```lua
@@ -28,11 +26,10 @@ local Tab = Window:MakeTab({
 	PremiumOnly = false
 })
 ```
---[[
+
 Name = <string>
 Icon = <string>
 PremiumOnly = <bool>
-]]
 
 ## Creating a Section
 ```lua
@@ -40,11 +37,8 @@ local Section = Tab:AddSection({
 	Name = "Section"
 })
 ```
---[[
-Name = <string> - The name of the section.
-]]
 
-You can add elements to sections the same way you would add them to a tab normally.
+Name = <string>
 
 ## Notifying the user
 ```lua
@@ -55,14 +49,11 @@ OrionLib:MakeNotification({
 	Time = 5
 })
 ```
---[[
-Title = <string> - The title of the notification.
-Content = <string> - The content of the notification.
-Image = <string> - The icon of the notification.
-Time = <number> - The duration of the notfication.
-]]
 
-
+Title = <string>
+Content = <string>
+Image = <string>
+Time = <number>
 
 ## Creating a Button
 ```lua
@@ -73,11 +64,9 @@ Tab:AddButton({
   	end    
 })
 ```
---[[
-Name = <string> - The name of the button.
-Callback = <function> - The function of the button.
-]]
 
+Name = <string>
+Callback = <function>
 
 ## Creating a Checkbox toggle
 ```lua
@@ -89,18 +78,15 @@ Tab:AddToggle({
 	end    
 })
 ```
---[[
-Name = <string> - The name of the toggle.
-Default = <bool> - The default value of the toggle.
-Callback = <function> - The function of the toggle.
-]]
+
+Name = <string>
+Default = <bool>
+Callback = <function>
 
 ### Changing the value of an existing Toggle
 ```lua
 CoolToggle:Set(true)
 ```
-
-
 
 ## Creating a Color Picker
 ```lua
@@ -112,12 +98,10 @@ Tab:AddColorpicker({
 	end	  
 })
 ```
---[[
-Name = <string> - The name of the colorpicker.
-Default = <color3> - The default value of the colorpicker.
-Callback = <function> - The function of the colorpicker.
-]]
 
+Name = <string>
+Default = <color3>
+Callback = <function>
 
 ### Setting the color picker's value
 ```lua
@@ -140,22 +124,19 @@ Tab:AddSlider({
 	end    
 })
 ```
---[[
-Name = <string> - The name of the slider.
-Min = <number> - The minimal value of the slider.
-Max = <number> - The maxium value of the slider.
-Increment = <number> - How much the slider will change value when dragging.
-Default = <number> - The default value of the slider.
-ValueName = <string> - The text after the value number.
-Callback = <function> - The function of the slider.
-]]
-
+Name = <string>
+Min = <number>
+Max = <number>
+Increment = <number>
+Default = <number>
+ValueName = <string>
+Callback = <function>
 
 ### Change Slider Value
 ```lua
 Slider:Set(2)
 ```
-Make sure you make your slider a variable (local CoolSlider = Tab:AddSlider...) for this to work.
+Make sure you make your slider a variable (local CoolSlider = Tab:AddSlider...)
 
 
 ## Creating a Label
@@ -191,13 +172,11 @@ Tab:AddTextbox({
 	end	  
 })
 ```
---[[
-Name = <string> - The name of the textbox.
-Default = <string> - The default value of the textbox.
-TextDisappear = <bool> - Makes the text disappear in the textbox after losing focus.
-Callback = <function> - The function of the textbox.
-]]
 
+Name = <string>
+Default = <string>
+TextDisappear = <bool>
+Callback = <function>
 
 ## Creating a Keybind
 ```lua
@@ -210,12 +189,11 @@ Tab:AddBind({
 	end    
 })
 ```
---[[
-Name = <string> - The name of the bind.
-Default = <keycode> - The default value of the bind.
-Hold = <bool> - Makes the bind work like: Holding the key > The bind returns true, Not holding the key > Bind returns false.
-Callback = <function> - The function of the bind.
-]]
+
+Name = <string>
+Default = <keycode>
+Hold = <bool>
+Callback = <function>
 
 ### Chaning the value of a bind
 ```lua
@@ -234,12 +212,11 @@ Tab:AddDropdown({
 	end    
 })
 ```
---[[
-Name = <string> - The name of the dropdown.
-Default = <string> - The default value of the dropdown.
-Options = <table> - The options in the dropdown.
-Callback = <function> - The function of the dropdown.
-]]
+
+Name = <string>
+Default = <string>
+Options = <table>
+Callback = <function>
 
 ### Adding a set of new Dropdown buttons to an existing menu
 ```lua
@@ -253,7 +230,6 @@ Dropdown:Set("dropdown option")
 ```
 
 # Finishing your script (REQUIRED)
-The below function needs to be added at the end of your code.
 ```lua
 OrionLib:Init()
 ```
