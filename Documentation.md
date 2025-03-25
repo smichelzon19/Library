@@ -6,7 +6,7 @@ local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/jen
 ## Creating a Window
 ```lua
 local Window = OrionLib:MakeWindow({Name = "Title of the library", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest"})
-
+```
 --[[
 Name = <string> - The name of the UI.
 HidePremium = <bool> - Whether or not the user details shows Premium status or not.
@@ -18,7 +18,6 @@ IntroIcon = <string> - URL to the image you want to use in the intro animation.
 Icon = <string> - URL to the image you want displayed on the window.
 CloseCallback = <function> - Function to execute when the window is closed.
 ]]
-```
 
 
 
@@ -29,23 +28,23 @@ local Tab = Window:MakeTab({
 	Icon = "rbxassetid://4483345998",
 	PremiumOnly = false
 })
-
+```
 --[[
 Name = <string> - The name of the tab.
 Icon = <string> - The icon of the tab.
 PremiumOnly = <bool> - Makes the tab accessible to Sirus Premium users only.
 ]]
-```
+
 ## Creating a Section
 ```lua
 local Section = Tab:AddSection({
 	Name = "Section"
 })
-
+```
 --[[
 Name = <string> - The name of the section.
 ]]
-```
+
 You can add elements to sections the same way you would add them to a tab normally.
 
 ## Notifying the user
@@ -56,14 +55,13 @@ OrionLib:MakeNotification({
 	Image = "rbxassetid://4483345998",
 	Time = 5
 })
-
+```
 --[[
 Title = <string> - The title of the notification.
 Content = <string> - The content of the notification.
 Image = <string> - The icon of the notification.
 Time = <number> - The duration of the notfication.
 ]]
-```
 
 
 
@@ -75,12 +73,11 @@ Tab:AddButton({
       		print("button pressed")
   	end    
 })
-
+```
 --[[
 Name = <string> - The name of the button.
 Callback = <function> - The function of the button.
 ]]
-```
 
 
 ## Creating a Checkbox toggle
@@ -92,13 +89,12 @@ Tab:AddToggle({
 		print(Value)
 	end    
 })
-
+```
 --[[
 Name = <string> - The name of the toggle.
 Default = <bool> - The default value of the toggle.
 Callback = <function> - The function of the toggle.
 ]]
-```
 
 ### Changing the value of an existing Toggle
 ```lua
@@ -116,13 +112,13 @@ Tab:AddColorpicker({
 		print(Value)
 	end	  
 })
-
+```
 --[[
 Name = <string> - The name of the colorpicker.
 Default = <color3> - The default value of the colorpicker.
 Callback = <function> - The function of the colorpicker.
 ]]
-```
+
 
 ### Setting the color picker's value
 ```lua
@@ -144,7 +140,7 @@ Tab:AddSlider({
 		print(Value)
 	end    
 })
-
+```
 --[[
 Name = <string> - The name of the slider.
 Min = <number> - The minimal value of the slider.
@@ -154,7 +150,7 @@ Default = <number> - The default value of the slider.
 ValueName = <string> - The text after the value number.
 Callback = <function> - The function of the slider.
 ]]
-```
+
 
 ### Change Slider Value
 ```lua
@@ -195,14 +191,13 @@ Tab:AddTextbox({
 		print(Value)
 	end	  
 })
-
+```
 --[[
 Name = <string> - The name of the textbox.
 Default = <string> - The default value of the textbox.
 TextDisappear = <bool> - Makes the text disappear in the textbox after losing focus.
 Callback = <function> - The function of the textbox.
 ]]
-```
 
 
 ## Creating a Keybind
@@ -215,14 +210,13 @@ Tab:AddBind({
 		print("press")
 	end    
 })
-
+```
 --[[
 Name = <string> - The name of the bind.
 Default = <keycode> - The default value of the bind.
 Hold = <bool> - Makes the bind work like: Holding the key > The bind returns true, Not holding the key > Bind returns false.
 Callback = <function> - The function of the bind.
 ]]
-```
 
 ### Chaning the value of a bind
 ```lua
@@ -240,14 +234,13 @@ Tab:AddDropdown({
 		print(Value)
 	end    
 })
-
+```
 --[[
 Name = <string> - The name of the dropdown.
 Default = <string> - The default value of the dropdown.
 Options = <table> - The options in the dropdown.
 Callback = <function> - The function of the dropdown.
 ]]
-```
 
 ### Adding a set of new Dropdown buttons to an existing menu
 ```lua
